@@ -12,7 +12,10 @@ public class Hangman {
     
     
     
-    //method
+    //method for checking number of guesess. 
+    //3 choices easy, intermediate, hard
+    //if user choice easy, allocate int 15 to number of tries, allocate int 4 occurance (space) for the useer to type.
+    //if else loop,
     
     
     
