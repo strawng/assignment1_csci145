@@ -1,0 +1,55 @@
+// just posted what i was working on for the hangman assignment in case anyone wants to pull any ideas from it or use it. It's not complete but its a start! 
+
+import java.util.Scanner;
+public class Hangman {
+    private static final boolean testingMode = true;
+    public static void main(String args[]){
+        int count=0;
+        if (count==20){
+            System.out.println("Maximum number of games played");
+            return;
+        }
+    chooseDifficulty();
+    game(5, 6);
+    }
+    public static void chooseDifficulty(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your difficulty: Easy (e), Intermediate (i), or Hard (h): ");
+        String difficulty = scanner.next();
+        char charDifficulty = difficulty.charAt(0);
+        difficulty=String.valueOf(charDifficulty);
+        System.out.println(difficulty);
+        if (difficulty.equalsIgnoreCase("h")){
+            //pass number of guesses (15) and spaces for character (4)
+        }
+        if (difficulty.equalsIgnoreCase("i")){
+
+        }
+        if (difficulty.equalsIgnoreCase("e")){
+
+        }
+        else{
+            System.out.println("Invalid difficulty. Try Again...");
+            chooseDifficulty();
+        }
+
+
+    }
+    public static void game(int numGuesses, int spaces){
+        String secret = RandomWord.newWord();
+        System.out.println(secret);
+        String displayWord="";
+        for (int i=0; i<secret.length();i++){
+            displayWord=displayWord + "-";
+        }
+        System.out.println("The word is: " + displayWord);
+        for (int i =0; i< numGuesses; i++){
+            System.out.println("Please enter the letter you want to guess: ");
+            char letter= Scanner.next();
+
+        }
+
+
+
+    }
+}
